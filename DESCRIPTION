@@ -2,9 +2,8 @@ Package: waspr
 Type: Package
 Title: waspr: an R package for computing Wasserstein barycenters of subset posteriors
 Version: 0.1.0
-Author:person("Jolien", "Cremers", email = "joliencremers@gmail.com",
+Authors@R:person("Jolien", "Cremers", email = "joliencremers@gmail.com",
                   role = c("aut", "cre"))
-Maintainer: The package maintainer <yourself@somewhere.net>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: GPL-3
@@ -21,8 +20,10 @@ RoxygenNote: 7.1.0
 Suggests: 
     knitr,
     rmarkdown,
-    testthat
+    testthat,
+    spelling
 VignetteBuilder: knitr
+Language: en-US
 Biarch: true
 Depends: 
     R (>= 3.5.0)
