@@ -76,6 +76,10 @@ wasp(pois_logistic,
 #>     "beta_l", "baseline_sigma", "baseline_mu", "correlation", 
 #>     "sigma_s", "sigma_l"))
 #> 
+#> Swapping algorithm: 
+#> iter = 10
+#> acc = 0.001
+#> 
 #> MCMC: 
 #> subsets = 8
 #> parameters = 8
