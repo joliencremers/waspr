@@ -8,12 +8,7 @@
 #'
 #' @return A \code{wasp} object, which can be further analyzed using the
 #'   associated function \code{\link{summary.wasp}}.
-#'
-#'   A \code{wasp} object contains the following elements:
-#'
-#'   \describe{ \item{\code{post_samp}}{A matrix of posterior samples for the
-#'   full posterior obtained by the wasp algorithm.} }
-#'
+#'#'
 #' @source Puccetti, G., Rüschendorf, L. & Vanduffel, S. (2020). On the
 #'   computation of Wasserstein barycenters, Journal of Multivariate Analysis,
 #'   176.

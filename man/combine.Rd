@@ -18,11 +18,7 @@ combine(x)
 \value{
 A \code{wasp} object, which can be further analyzed using the
   associated function \code{\link{summary.wasp}}.
-
-  A \code{wasp} object contains the following elements:
-
-  \describe{ \item{\code{post_samp}}{A matrix of posterior samples for the
-  full posterior obtained by the wasp algorithm.} }
+#'
 }
 \description{
 This (non-exported) function combines the output from the swapping algorithm (Puccetti,

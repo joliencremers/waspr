@@ -18,14 +18,11 @@ and Vanduffel (2020).
 \section{Functions}{
 
 
-  The main functions of the package are:
+  The main function of the package is:
 
   \code{\link{wasp}}, which runs the swapping algorithm developed by
   Puccetti, Rüschendorf and Vanduffel (2020), combines the output from the
   swapping algorithm and computes the Wasserstein barycenter. It returns an
-  S3 object of type \code{wasp}, which can be further analyzed through
-  associated functions.
-
-  \code{\link{combine}}, which
+  S3 object of type \code{wasp}.
 }
 
