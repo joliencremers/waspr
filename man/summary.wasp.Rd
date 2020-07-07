@@ -4,10 +4,10 @@
 \alias{summary.wasp}
 \title{Posterior summaries for the Wasserstein barycenter of subset posteriors}
 \usage{
-\method{summary}{wasp}(object)
+\method{summary}{wasp}(x)
 }
 \arguments{
-\item{object}{a \code{wasp object} obtained from the function \code{wasp()}.}
+\item{x}{a \code{wasp} object obtained from the function \code{wasp()}.}
 }
 \value{
 Posterior summary statistics (mean, mode, sd, 95% HPD interval) for
@@ -20,7 +20,6 @@ Posterior Density interval)
 }
 \examples{
 library(waspr)
-
 out <- wasp(pois_logistic,
             par.names = c("beta_s", "alpha_l", "beta_l",
                           "baseline_sigma", "baseline_mu",

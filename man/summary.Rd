@@ -4,10 +4,10 @@
 \alias{summary}
 \title{Posterior summaries for the Wasserstein barycenter of subset posteriors}
 \usage{
-summary(object)
+summary(x)
 }
 \arguments{
-\item{object}{a wasp object.}
+\item{x}{a \code{wasp} object.}
 }
 \description{
 \code{summary} gives a posterior summary (mean, mode, sd, HPD)

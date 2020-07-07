@@ -39,6 +39,8 @@ A \code{wasp} object, which can be further analyzed using the
   \item{\code{subsets}}{The amount of subset posteriors in mcmc.}
   \item{\code{parameters}}{The amount of parameters in mcmc.}
   \item{\code{samples}}{The amount of posterior samples for each subset posterior in mcmc.}
+  \item{\code{acc}}{Accuracy of the swapping algorithm, default = 0.001.}
+  \item{\code{iter}}{Maximum amount of iterations for the swapping algorithm, default = 10.}
   }
 }
 \description{

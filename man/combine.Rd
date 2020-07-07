@@ -9,10 +9,10 @@ Puccetti, G., Rüschendorf, L. & Vanduffel, S. (2020). On the
   176.
 }
 \usage{
-combine(object)
+combine(x)
 }
 \arguments{
-\item{object}{a three dimensional array (rows = subsets, columns = par, slices
+\item{x}{a three dimensional array (rows = subsets, columns = par, slices
 = samples) containing posterior samples for all subsets}
 }
 \value{

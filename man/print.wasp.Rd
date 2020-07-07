@@ -7,7 +7,7 @@
 \method{print}{wasp}(x, ...)
 }
 \arguments{
-\item{x}{a \code{wasp object} obtained from the function \code{wasp()}.}
+\item{x}{a \code{wasp} object obtained from the function \code{wasp()}.}
 
 \item{...}{further arguments passed to or from other methods.}
 }
@@ -18,5 +18,11 @@ A print of posterior summaries for the Wasserstein barycenter of subset posterio
 Prints selected output from a Bayesian circular mixed-effects model.
 }
 \examples{
+library(waspr)
+out <- wasp(pois_logistic,
+            par.names = c("beta_s", "alpha_l", "beta_l",
+                          "baseline_sigma", "baseline_mu",
+                          "correlation", "sigma_s", "sigma_l"))
+print(out)
 
 }
