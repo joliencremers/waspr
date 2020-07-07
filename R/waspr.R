@@ -3,11 +3,7 @@
 #'
 #' This package contains functions to compute Wasserstein barycenters of subset
 #' posteriors using the swapping algorithm developed by Puccetti, Rüschendorf
-#' and Vanduffel (2020). A user can either provide an object containing mcmc
-#' samples for all subset posteriors or provide a stan model, data and desired
-#' amount of subsets. If the user provides a stan model and data the function
-#' \code{stan_wasp} will analyze the data subsets in parallel using
-#' \code{rstan}.
+#' and Vanduffel (2020).
 #'
 #' @section Functions:
 #'
@@ -15,7 +11,7 @@
 #'
 #'   \code{\link{wasp}}, which runs the swapping algorithm developed by
 #'   Puccetti, Rüschendorf and Vanduffel (2020), combines the output from the
-#'   swapping algorithm and computes the wasserstein barycenter. It returns an
+#'   swapping algorithm and computes the Wasserstein barycenter. It returns an
 #'   S3 object of type \code{wasp}, which can be further analyzed through
 #'   associated functions.
 #'

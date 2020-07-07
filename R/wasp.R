@@ -30,6 +30,8 @@
 #'   \item{\code{subsets}}{The amount of subset posteriors in mcmc.}
 #'   \item{\code{parameters}}{The amount of parameters in mcmc.}
 #'   \item{\code{samples}}{The amount of posterior samples for each subset posterior in mcmc.}
+#'   \item{\code{acc}}{Accuracy of the swapping algorithm, default = 0.001.}
+#'   \item{\code{iter}}{Maximum amount of iterations for the swapping algorithm, default = 10.}
 #'   }
 #'
 #' @source Puccetti, G., Rüschendorf, L. & Vanduffel, S. (2020). On the
@@ -50,6 +52,22 @@
 
 wasp <- function(mcmc, par.names = NULL,
                  acc = 0.001, iter = 10){
+
+  if(!is.null(par.names) & !is.character(par.names)){
+    stop("par.names is not a character vector")
+  }
+
+  if(!is.numeric(mcmc)){
+    stop("mcmc is not numeric")
+  }
+
+  if(!is.array(mcmc)){
+    stop("mcmc is not a three dimensional array")
+  }
+
+  if(length(dim(mcmc)) != 3){
+    stop("mcmc is not a three dimensional array")
+  }
 
   subsets = dim(mcmc)[1]
   par = dim(mcmc)[2]
@@ -75,7 +93,9 @@ wasp <- function(mcmc, par.names = NULL,
                 'call' = call,
                 'subsets' = subsets,
                 'parameters' = par,
-                'samples' = samples)
+                'samples' = samples,
+                'iter' = iter,
+                'acc' = acc)
 
   class(output) = c("wasp", class(output))
 

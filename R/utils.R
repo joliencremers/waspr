@@ -3,7 +3,7 @@
 #' This (non-exported) function combines the output from the swapping algorithm (Puccetti,
 #' Rüschendorf and Vanduffel, 2020).
 #'
-#' @param object a three dimensional array (rows = subsets, columns = par, slices
+#' @param x a three dimensional array (rows = subsets, columns = par, slices
 #'   = samples) containing posterior samples for all subsets
 #'
 #' @return A \code{wasp} object, which can be further analyzed using the
@@ -19,9 +19,9 @@
 #'   176.
 #'
 
-combine <- function(object){
+combine <- function(x){
 
-  out = apply(object, 2, colMeans)
+  out = apply(x, 2, colMeans)
   return(out)
 
 }
@@ -42,7 +42,13 @@ combine <- function(object){
 #'
 #' @export
 
-mode_est <- function(x){hmode(x, 0.1)}
+mode_est <- function(x){
+
+
+  if(!is.numeric(x)){stop("x is not numeric")}
+  hmode(x, 0.1)
+
+  }
 
 #' Compute the 95 percent Highest Posterior Density interval
 #'
@@ -61,4 +67,9 @@ mode_est <- function(x){hmode(x, 0.1)}
 #'
 #' @export
 
-hpd_est <- function(x){hmodeci(x, 0.95)}
+hpd_est <- function(x){
+
+  if(!is.numeric(x)){stop("x is not numeric")}
+  hmodeci(x, 0.95)
+
+  }
