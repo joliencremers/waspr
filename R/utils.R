@@ -1,0 +1,64 @@
+#' Combine output of the swapping algorithm
+#'
+#' This (non-exported) function combines the output from the swapping algorithm (Puccetti,
+#' Rüschendorf and Vanduffel, 2020).
+#'
+#' @param object a three dimensional array (rows = subsets, columns = par, slices
+#'   = samples) containing posterior samples for all subsets
+#'
+#' @return A \code{wasp} object, which can be further analyzed using the
+#'   associated function \code{\link{summary.wasp}}.
+#'
+#'   A \code{wasp} object contains the following elements:
+#'
+#'   \describe{ \item{\code{post_samp}}{A matrix of posterior samples for the
+#'   full posterior obtained by the wasp algorithm.} }
+#'
+#' @source Puccetti, G., Rüschendorf, L. & Vanduffel, S. (2020). On the
+#'   computation of Wasserstein barycenters, Journal of Multivariate Analysis,
+#'   176.
+#'
+
+combine <- function(object){
+
+  out = apply(object, 2, colMeans)
+  return(out)
+
+}
+
+#' Compute the mode
+#'
+#' @param x a numeric vector
+#'
+#' @return The mode of a numeric vector as computed by the methods from Venter
+#'   (1967).
+#'
+#' @source Venter, J.H. (1967). On estimation of the mode, Annals of
+#'   Mathematical Statistics, 38(5), 1446-1455.
+#'
+#' @examples
+#' library(waspr)
+#' mode_est(pois_logistic[1,1,])
+#'
+#' @export
+
+mode_est <- function(x){hmode(x, 0.1)}
+
+#' Compute the 95 percent Highest Posterior Density interval
+#'
+#' @inheritParams mode_est
+#'
+#' @return A vector containing the lower and upper bound of the 96% Highest
+#'   Posterior Density interval of a numeric vector as computed by the methods
+#'   from Venter (1967).
+#'
+#' @source Venter, J.H. (1967). On estimation of the mode, Annals of
+#'   Mathematical Statistics, 38(5), 1446-1455.
+#'
+#' @examples
+#' library(waspr)
+#' hpd_est(pois_logistic[1,1,])
+#'
+#' @export
+
+hpd_est <- function(x){hmodeci(x, 0.95)}

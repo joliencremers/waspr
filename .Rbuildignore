@@ -1,0 +1,6 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^data-raw$
+^paper.md
+^paper.Rmd
+^paper.bib

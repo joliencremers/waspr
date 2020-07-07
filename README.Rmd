@@ -1,0 +1,46 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-"
+)
+```
+# waspr
+<!-- [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/waspr)](https://cran.r-project.org/package=waspr)  -->
+[![Build Status](https://travis-ci.org/joliencremers/waspr.svg?branch=master)](https://travis-ci.org/joliencremers/waspr)
+
+The goal of waspr is to compute Wasserstein barycenters of subset posteriors. 
+
+## Installation
+
+The R-package waspr can be installed from CRAN as follows:
+
+```{r gh-installation cran, eval = FALSE}
+install.packages("waspr")
+```
+
+Alternatively you can install a beta-version of waspr from github with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("joliencremers/waspr")
+```
+
+## Example
+
+This is a basic example which shows you how to compute the Wasserstein barycenter from a set of mcmc outputs for several data subsets:
+
+```{r example}
+library(waspr)
+
+wasp(pois_logistic,
+     par.names = c("beta_s", "alpha_l", "beta_l",
+                   "baseline_sigma", "baseline_mu",
+                   "correlation", "sigma_s", "sigma_l"))
+```

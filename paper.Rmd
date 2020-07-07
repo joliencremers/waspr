@@ -1,0 +1,37 @@
+---
+title: |
+  waspr: an R package for computing Wasserstein barycenters of subset posteriors
+tags:
+  - R
+  - Bayesian statistics
+  - Wasserstein barycenter
+authors:
+  - name: Jolien Cremers
+    orcid: 0000-0002-0037-1747
+    affiliation: 1
+affiliations:
+ - name: Section of Biostatistics, Department of Public Health, University of Copenhagen
+   index: 1
+date: "7/7/2020"
+bibliography: paper.bib
+output:
+  md_document:
+    preserve_yaml: true
+    variant: markdown
+    pandoc_args: "--atx-headers"
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Summary
+
+
+
+# Statement of Need
+
+# Example Usage
+
+# References
