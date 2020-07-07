@@ -13,13 +13,15 @@ posteriors.
 
 ## Installation
 
-The R-package waspr can be installed from CRAN as follows:
+<!-- The R-package waspr can be installed from CRAN as follows: -->
 
-``` r
-install.packages("waspr")
-```
+<!-- ```{r gh-installation cran, eval = FALSE} -->
 
-Alternatively you can install a beta-version of waspr from github with:
+<!-- install.packages("waspr") -->
+
+<!-- ``` -->
+
+You can install a beta-version of waspr from github with:
 
 ``` r
 # install.packages("devtools")
@@ -29,7 +31,9 @@ devtools::install_github("joliencremers/waspr")
 ## Example
 
 This is a basic example which shows you how to compute the Wasserstein
-barycenter from a set of mcmc outputs for several data subsets:
+barycenter from a set of mcmc outputs for several data subsets. A more
+extensive explanation of the usage of the package can be found in the
+Tutorial vignette.
 
 ``` r
 library(waspr)
@@ -39,10 +43,10 @@ library(waspr)
 #> 
 #>     summary
 
-out <- wasp(pois_logistic,
-            par.names = c("beta_s", "alpha_l", "beta_l",
-                          "baseline_sigma", "baseline_mu",
-                          "correlation", "sigma_s", "sigma_l"))
+wasp(pois_logistic,
+     par.names = c("beta_s", "alpha_l", "beta_l",
+                   "baseline_sigma", "baseline_mu",
+                   "correlation", "sigma_s", "sigma_l"))
 #> Iteration:1
 #> Cost:738.216
 #> Iteration:2
@@ -63,7 +67,21 @@ out <- wasp(pois_logistic,
 #> Cost:738.36
 #> Iteration:10
 #> Cost:738.108
-summary(out)
+#> 
+#> 
+#> WASP 
+#> 
+#> Call: 
+#> wasp(mcmc = pois_logistic, par.names = c("beta_s", "alpha_l", 
+#>     "beta_l", "baseline_sigma", "baseline_mu", "correlation", 
+#>     "sigma_s", "sigma_l"))
+#> 
+#> MCMC: 
+#> subsets = 8
+#> parameters = 8
+#> samples = 450
+#> 
+#> Posterior summary of the Wasserstein Barycenter: 
 #>                      mean       mode         sd      LB hpd     UB HPD
 #> beta_s          0.5527601  0.5518034 0.10988949  0.36598187  0.7896041
 #> alpha_l         2.6811079  2.6959176 0.19199304  2.30380675  3.0295802
