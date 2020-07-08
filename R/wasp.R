@@ -23,7 +23,7 @@
 #'
 #'   \describe{
 #'   \item{\code{barycenter}}{A matrix of posterior samples (rows) for
-#'   all parameters (columns) of the full posterior obtained by the wasp algorithm.}
+#'   all parameters (columns) of the full posterior obtained by the swapping algorithm.}
 #'   \item{\code{raw}}{An array (\code{dim = c(subsets, parameters, samples)})
 #'   containing the raw output from the swapping algorithm.}
 #'   \item{\code{call}}{The call to the \code{wasp()} function.}
