@@ -25,4 +25,53 @@ title: |
     posteriors
 ---
 
+# Summary
 
+Wasserstein barycenters of subset posteriors (WASP) is a geometric
+approach for combining subset posteriors and was introduced by
+@Srivastava2015-hf as a method for scaleable Bayesian computation. The
+idea behind using the Wasserstein barycenter is simple. Instead of
+sampling from the posterior distribution using Markov Chain Monte Carlo
+(MCMC), or other, methods on the entire dataset, the data is split up
+into several subsets on for each of which samples from the subset
+posterior are obtained. The samples from the subset posteriors are then
+combined into one estimate of the full posterior using the Wasserstein
+barycenter. This is advantageous in case of big data. MCMC algorithms
+often take a long time to converge, especially in case of complex models
+and/or big datasets. The WASP setup allows for parallel and distributed
+computation, thereby increasing computational speed.
+
+# Statement of Need
+
+WASP is not the only scaleable Bayesian method. It is one of a set of
+scaleable Bayesian methods that obtains subset posteriors using some
+sampling algorithm and subsequently combines them into a single sample
+from the full data posterior. Three other scaleable methods for subset
+posteriors, averaging, Consensus Monte Carlo [@Scott2016-wu], and
+semiparametric density product estimators [@Neiswanger2013-nk], were
+implemented in the `R`-package `parallelMCMCcombine`. This package is
+however not actively maintained and was removed from `CRAN`. Moreover,
+@Srivastava2018-zw, shows that WASP obtains better approximations of the
+full data posterior than other methods for subset posteriors.
+
+Wasserstein barycenters can be estimated using several techniques. The
+`R`-package `Barycenter` implements the Sinkhorn algorithm developed by
+@Cuturi2013-uh and @Cuturi2014-nk that can be used to estimate the
+Wasserstein barycenter. More recently however, @Puccetti2017-zl
+developed the swapping algorithm of which an iterated version can be
+used to estimate the Wasserstein barycenter and which shows improvements
+in computational speed over the methods developed in @Cuturi2014-nk
+[@Puccetti2020-es].
+
+The new `R`-package `waspr` implements the swapping algorithm to
+estimate the Wasserstein barycenter of subset posteriors.
+
+# Example Usage
+
+# Acknowledgements
+
+JC is supported for this work by a research grant from the Novo Nordisk
+Foundation ("Harnessing The Power of Big Data to Address the Societal
+Challenge of Aging." NNF17OC0027812)
+
+# References {#references .unnumbered}
