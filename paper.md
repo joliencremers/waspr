@@ -98,6 +98,8 @@ accuracy of the swapping algorithm.
 
 ``` {.r}
 out = wasp(pois_logistic,
+           iter = 10,
+           acc = 0.001,
            par.names = c("beta_s", "alpha_l", "beta_l",
                          "baseline_sigma", "baseline_mu",
                          "correlation", "sigma_s", "sigma_l"))
@@ -124,7 +126,7 @@ out = wasp(pois_logistic,
     ## Iteration:10
     ## Cost:738.108
 
-`wasp()` outputs the iteration number and cost function value of the
+`wasp()` prints the iteration number and cost function value of the
 swapping algorithm. The `out` object is of class `wasp` and contains
 several objects. To obtain the Wasserstein barycenter of the subset
 posteriors a user can specify `out$barycenter`. This returns a matrix of
