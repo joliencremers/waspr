@@ -8,7 +8,7 @@
 #'
 #' @return A \code{wasp} object, which can be further analyzed using the
 #'   associated function \code{\link{summary.wasp}}.
-#'#'
+#'
 #' @source Puccetti, G., Rüschendorf, L. & Vanduffel, S. (2020). On the
 #'   computation of Wasserstein barycenters, Journal of Multivariate Analysis,
 #'   176.
