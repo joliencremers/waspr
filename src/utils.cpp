@@ -18,6 +18,7 @@ using namespace arma;
 //'
 //' @return a scalar containing the estimate of the mode
 //'
+//' @export hmode
 // [[Rcpp::export]]
 
 double hmode(NumericVector x, double cip) {
@@ -64,6 +65,7 @@ double hmode(NumericVector x, double cip) {
 //'
 //' The bandwidth \code{cip} is set to 0.95 to find the 95% HPD interval and to 0.1 to compute the mode.
 //'
+//' @export hmodeci
 // [[Rcpp::export]]
 
 NumericVector hmodeci(NumericVector x, double cip) {
