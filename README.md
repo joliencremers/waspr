@@ -5,9 +5,8 @@
 
 <!-- [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/waspr)](https://cran.r-project.org/package=waspr)  -->
 
-<!-- badges: start --> [![Travis build
-status](https://travis-ci.com/joliencremers/waspr.svg?branch=master)](https://travis-ci.com/joliencremers/waspr)
-<!-- badges: end -->
+[![Build
+Status](https://travis-ci.org/joliencremers/waspr.svg?branch=master)](https://travis-ci.org/joliencremers/waspr)
 
 The goal of waspr is to compute Wasserstein barycenters of subset
 posteriors.
@@ -48,26 +47,6 @@ wasp(pois_logistic,
      par.names = c("beta_s", "alpha_l", "beta_l",
                    "baseline_sigma", "baseline_mu",
                    "correlation", "sigma_s", "sigma_l"))
-#> Iteration:1
-#> Cost:738.216
-#> Iteration:2
-#> Cost:738.224
-#> Iteration:3
-#> Cost:737.835
-#> Iteration:4
-#> Cost:738.29
-#> Iteration:5
-#> Cost:738.137
-#> Iteration:6
-#> Cost:738.614
-#> Iteration:7
-#> Cost:738.23
-#> Iteration:8
-#> Cost:738.48
-#> Iteration:9
-#> Cost:738.36
-#> Iteration:10
-#> Cost:738.108
 #> 
 #> 
 #> WASP 
@@ -87,7 +66,7 @@ wasp(pois_logistic,
 #> samples = 450
 #> 
 #> Posterior summary of the Wasserstein Barycenter: 
-#>                      mean       mode         sd      LB hpd     UB HPD
+#>                      mean       mode         sd      LB HPD     UB HPD
 #> beta_s          0.5527601  0.5518034 0.10988949  0.36598187  0.7896041
 #> alpha_l         2.6811079  2.6959176 0.19199304  2.30380675  3.0295802
 #> beta_l          0.7508520  0.7339988 0.21631011  0.37281283  1.1740767
