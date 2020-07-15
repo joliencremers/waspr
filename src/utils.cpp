@@ -7,17 +7,17 @@ using namespace std;
 using namespace arma;
 
 
-//' Estimate the mode by finding the highest posterior density interval
-//'
-//' @param x a  sample from which to estimate the interval
-//' @param cip bandwidth for the algorithm, ranging from 0 to 1
-//'
-//' @section Details:
-//'   The bandwidth \code{cip} is set to 0.95 to find the 95% HPD interval and
-//'   to 0.1 to compute the mode.
-//'
-//' @return a scalar containing the estimate of the mode
-//'
+// Estimate the mode by finding the highest posterior density interval
+//
+// @param x a  sample from which to estimate the interval
+// @param cip bandwidth for the algorithm, ranging from 0 to 1
+//
+// @section Details:
+//   The bandwidth \code{cip} is set to 0.95 to find the 95% HPD interval and
+//   to 0.1 to compute the mode.
+//
+// @return a scalar containing the estimate of the mode
+//
 // [[Rcpp::export]]
 
 double hmode(NumericVector x, double cip) {
@@ -55,15 +55,15 @@ double hmode(NumericVector x, double cip) {
 }
 
 
-//' Find the highest density interval.
-//'
-//' @param x a  sample from which to estimate the interval
-//' @param cip bandwidth for the algorithm, ranging from 0 to 1
-//'
-//' @return a vector of length 2 containing the lower and upper bound of the HPD interval.
-//'
-//' The bandwidth \code{cip} is set to 0.95 to find the 95% HPD interval and to 0.1 to compute the mode.
-//'
+// Find the highest density interval.
+//
+// @param x a  sample from which to estimate the interval
+// @param cip bandwidth for the algorithm, ranging from 0 to 1
+//
+// @return a vector of length 2 containing the lower and upper bound of the HPD interval.
+//
+// The bandwidth \code{cip} is set to 0.95 to find the 95% HPD interval and to 0.1 to compute the mode.
+//
 // [[Rcpp::export]]
 
 NumericVector hmodeci(NumericVector x, double cip) {
