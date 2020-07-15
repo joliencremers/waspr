@@ -95,15 +95,18 @@ barycenter. It has four arguments, `mcmc`, that specifies the
 3-dimensional array with samples for each subset posterior, and optional
 arguments `par.names`, that can be used to specify parameter names,
 `iter` to specify the maximum number of iterations of the swapping
-algorithm and `acc` to specify the accuracy of the swapping algorithm.
+algorithm, `acc` to specify the accuracy of the swapping algorithm and
+`out` to indicate whether the results per iteration of the swap
+algorithm should be printed.
 
 ``` {.r}
 out <- wasp(pois_logistic,
-           iter = 10,
-           acc = 0.001,
-           par.names = c("beta_s", "alpha_l", "beta_l",
-                         "baseline_sigma", "baseline_mu",
-                         "correlation", "sigma_s", "sigma_l"))
+            iter = 10,
+            acc = 0.001,
+            par.names = c("beta_s", "alpha_l", "beta_l",
+                          "baseline_sigma", "baseline_mu",
+                          "correlation", "sigma_s", "sigma_l"),
+            out = FALSE)
 ```
 
 `wasp()` prints the iteration number and cost function value of the
