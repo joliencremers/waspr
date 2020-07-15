@@ -3,7 +3,7 @@
 
 # waspr
 
-<!-- [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/waspr)](https://cran.r-project.org/package=waspr)  -->
+<!-- [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/waspr)](https://cran.r-project.org/package=waspr) -->
 
 [![Build
 Status](https://travis-ci.org/joliencremers/waspr.svg?branch=master)](https://travis-ci.org/joliencremers/waspr)

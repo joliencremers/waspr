@@ -1,19 +1,13 @@
 ## Test environments
 * local Windows install, R 4.0.1
-* ubuntu 12.04 (on travis-ci), R 3.1.2
+* Ubuntu 16.04.6 LTS (on travis-ci), R 4.0.0
 * win-builder (devel and release)
 
-## R CMD check results
-There were no ERROR.
+## R CMD check results 
 
-There was 1 WARNING:
+There were no ERRORs or WARNINGs on the development version and current release of R.
+There were no NOTES.
 
-  *'qpdf' is needed for checks on size reduction of PDFs
+## Downstream dependencies
 
-
-There was 1 NOTE:
-
-  *Compilation used the following non-portable flag(s):
-  '-march=corei7'
-
-R6 is a build-time dependency.
+There are currently no downstream dependencies for this package.
