@@ -13,13 +13,14 @@ using namespace arma;
 //'   subsets, columns = par, slices = samples)
 //' @param acc accuracy
 //' @param iter maximum number of iterations of the algorithm
+//' @param out boolean indicating whether output for each iteration should be displayed (default = false)
 //'
 //' @return a three dimensional array (rows = subsets, columns = par, slices =
 //'   samples) containing output from the swapping algorithm.
 //'
 // [[Rcpp::export]]
 
-arma::cube swap_rcpp(arma::cube samples, double acc = 0.001, int iter = 10) {
+arma::cube swap_rcpp(arma::cube samples, double acc = 0.001, int iter = 10, bool out = false) {
 
   arma::cube samples_new = cube(samples);
 
@@ -62,8 +63,10 @@ arma::cube swap_rcpp(arma::cube samples, double acc = 0.001, int iter = 10) {
     its += 1; //increase iteration counter by one
     cost_vec = arma::zeros(k);
 
-    Rcout << "Iteration:" << its << "\n";
-    Rcout << "Cost:" << cost_prev << "\n";
+    if(out) {
+      Rcout << "Iteration:" << its << "\n";
+      Rcout << "Cost:" << cost_prev << "\n";
+    }
 
     for (int i = 0; i < n; ++i){
 
