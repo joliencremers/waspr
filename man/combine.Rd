@@ -18,7 +18,6 @@ combine(x)
 \value{
 A \code{wasp} object, which can be further analyzed using the
   associated function \code{\link{summary.wasp}}.
-#'
 }
 \description{
 This (non-exported) function combines the output from the swapping algorithm (Puccetti,

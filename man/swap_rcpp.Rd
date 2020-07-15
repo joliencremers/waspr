@@ -4,7 +4,7 @@
 \alias{swap_rcpp}
 \title{The swapping algorithm for computing Wasserstein barycenters}
 \usage{
-swap_rcpp(samples, acc = 0.001, iter = 10L)
+swap_rcpp(samples, acc = 0.001, iter = 10L, out = FALSE)
 }
 \arguments{
 \item{samples}{A cube containing samples for all subset posteriors (rows =
@@ -13,6 +13,8 @@ subsets, columns = par, slices = samples)}
 \item{acc}{accuracy}
 
 \item{iter}{maximum number of iterations of the algorithm}
+
+\item{out}{boolean indicating whether output for each iteration should be displayed (default = false)}
 }
 \value{
 a three dimensional array (rows = subsets, columns = par, slices =

@@ -9,7 +9,7 @@ Puccetti, G., Rüschendorf, L. & Vanduffel, S. (2020). On the
   176.
 }
 \usage{
-wasp(mcmc, par.names = NULL, acc = 0.001, iter = 10)
+wasp(mcmc, par.names = NULL, acc = 0.001, iter = 10, out = FALSE)
 }
 \arguments{
 \item{mcmc}{a three dimensional array (rows =  number of subset posteriors,
@@ -22,6 +22,8 @@ samples for all subsets}
 \item{acc}{accuracy of the swapping algorithm (default = 0.001)}
 
 \item{iter}{maximum number of iterations of the swapping algorithm (default = 10)}
+
+\item{out}{boolean indicating whether output for each iteration of the swapping algorithm should be displayed (default = false)}
 }
 \value{
 A \code{wasp} object, which can be further analyzed using the

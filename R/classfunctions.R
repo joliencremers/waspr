@@ -51,7 +51,7 @@ summary.wasp <- function(x){
 
   out = cbind(mean, mode, sd, t(hpd))
 
-  colnames(out) = c("mean", "mode", "sd", "LB hpd", "UB HPD")
+  colnames(out) = c("mean", "mode", "sd", "LB HPD", "UB HPD")
   rownames(out) = colnames(x$barycenter)
 
   return(out)

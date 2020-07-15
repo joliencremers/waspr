@@ -10,6 +10,7 @@
 #' @param par.names optional character vector with parameter names
 #' @param acc accuracy of the swapping algorithm (default = 0.001)
 #' @param iter maximum number of iterations of the swapping algorithm (default = 10)
+#' @param out boolean indicating whether output for each iteration of the swapping algorithm should be displayed (default = false)
 #'
 #' @details The swapping algorithm developed by Puccetti, Rüschendorf and
 #'   Vanduffel (2020) is used to compute Wasserstein barycenters of subset
@@ -51,7 +52,7 @@
 #'
 
 wasp <- function(mcmc, par.names = NULL,
-                 acc = 0.001, iter = 10){
+                 acc = 0.001, iter = 10, out = FALSE){
 
   if(!is.null(par.names) & !is.character(par.names)){
     stop("par.names is not a character vector")
@@ -77,7 +78,12 @@ wasp <- function(mcmc, par.names = NULL,
     stop("Names are not provided for each parameter, length(par.names) != dim(mcmc)[2].")
   }
 
-  res_wasp = swap_rcpp(samples = mcmc, acc = acc, iter = iter)
+  if(out){
+    res_wasp = swap_rcpp(samples = mcmc, acc = acc, iter = iter, out = TRUE)
+  }else{
+    res_wasp = swap_rcpp(samples = mcmc, acc = acc, iter = iter)
+  }
+
 
   barycenter = combine(res_wasp)
 

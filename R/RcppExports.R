@@ -9,12 +9,13 @@
 #'   subsets, columns = par, slices = samples)
 #' @param acc accuracy
 #' @param iter maximum number of iterations of the algorithm
+#' @param out boolean indicating whether output for each iteration should be displayed (default = false)
 #'
 #' @return a three dimensional array (rows = subsets, columns = par, slices =
 #'   samples) containing output from the swapping algorithm.
 #'
-swap_rcpp <- function(samples, acc = 0.001, iter = 10L) {
-    .Call(`_waspr_swap_rcpp`, samples, acc, iter)
+swap_rcpp <- function(samples, acc = 0.001, iter = 10L, out = FALSE) {
+    .Call(`_waspr_swap_rcpp`, samples, acc, iter, out)
 }
 
 #' Estimate the mode by finding the highest posterior density interval

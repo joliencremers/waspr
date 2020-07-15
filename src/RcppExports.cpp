@@ -7,15 +7,16 @@
 using namespace Rcpp;
 
 // swap_rcpp
-arma::cube swap_rcpp(arma::cube samples, double acc, int iter);
-RcppExport SEXP _waspr_swap_rcpp(SEXP samplesSEXP, SEXP accSEXP, SEXP iterSEXP) {
+arma::cube swap_rcpp(arma::cube samples, double acc, int iter, bool out);
+RcppExport SEXP _waspr_swap_rcpp(SEXP samplesSEXP, SEXP accSEXP, SEXP iterSEXP, SEXP outSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< arma::cube >::type samples(samplesSEXP);
     Rcpp::traits::input_parameter< double >::type acc(accSEXP);
     Rcpp::traits::input_parameter< int >::type iter(iterSEXP);
-    rcpp_result_gen = Rcpp::wrap(swap_rcpp(samples, acc, iter));
+    Rcpp::traits::input_parameter< bool >::type out(outSEXP);
+    rcpp_result_gen = Rcpp::wrap(swap_rcpp(samples, acc, iter, out));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -45,7 +46,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_waspr_swap_rcpp", (DL_FUNC) &_waspr_swap_rcpp, 3},
+    {"_waspr_swap_rcpp", (DL_FUNC) &_waspr_swap_rcpp, 4},
     {"_waspr_hmode", (DL_FUNC) &_waspr_hmode, 2},
     {"_waspr_hmodeci", (DL_FUNC) &_waspr_hmodeci, 2},
     {NULL, NULL, 0}
