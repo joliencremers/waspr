@@ -4,4 +4,6 @@
 ^paper.md
 ^paper.Rmd
 ^paper.bib
+^LICENSE.txt
+^README.Rmd
 ^\.travis\.yml$
