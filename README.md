@@ -13,25 +13,23 @@ posteriors.
 
 ## Installation
 
-<!-- The R-package waspr can be installed from CRAN as follows: -->
+The R-package waspr can be installed from CRAN as follows:
 
-<!-- ```{r gh-installation cran, eval = FALSE} -->
-
-<!-- install.packages("waspr") -->
-
-<!-- ``` -->
+``` r
+install.packages("waspr")
+```
 
 You can install a beta-version of waspr from github with:
 
 ``` r
-# install.packages("devtools")
+install.packages("devtools")
 devtools::install_github("joliencremers/waspr")
 ```
 
 ## Example
 
 This is a basic example which shows you how to compute the Wasserstein
-barycenter from a set of mcmc outputs for several data subsets. A more
+barycenter from a set of MCMC outputs for several data subsets. A more
 extensive explanation of the usage of the package can be found in the
 Tutorial vignette.
 
