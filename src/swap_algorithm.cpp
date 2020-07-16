@@ -56,7 +56,7 @@ arma::cube swap_rcpp(arma::cube samples, double acc = 0.001, int iter = 10, bool
 
   cost_cur = mean(cost_vec);
 
-  while (std::abs(cost_cur - cost_prev) > acc & its < iter){
+  while ((std::abs(cost_cur - cost_prev) > acc) & (its < iter)){
 
     cost_prev = cost_cur; //assign current cost to previous
     cost_cur = 0; //set current cost to 0
