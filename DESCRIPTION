@@ -4,9 +4,9 @@ Title: Wasserstein Barycenters of Subset Posteriors
 Version: 1.0.0
 Authors@R:person("Jolien", "Cremers", email = "joliencremers@gmail.com",
                   role = c("aut", "cre"))
-Description: Functions to compute Wasserstein barycenters
-    of subset posteriors using the swapping algorithm developed by Puccetti, 
-    Rüschendorf and Vanduffel (2020) <doi:10.1016/j.jmaa.2017.02.003>.
+Description: Functions to compute Wasserstein {barycenters}
+    of subset posteriors using the swapping algorithm developed by {Puccetti}, 
+    {Rüschendorf} and {Vanduffel} (2020) <doi:10.1016/j.jmaa.2017.02.003>.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
