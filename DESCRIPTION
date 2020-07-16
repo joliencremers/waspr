@@ -1,6 +1,6 @@
 Package: waspr
 Type: Package
-Title: Wasserstein barycenters of subset posteriors
+Title: Wasserstein Barycenters of Subset Posteriors
 Version: 1.0.0
 Authors@R:person("Jolien", "Cremers", email = "joliencremers@gmail.com",
                   role = c("aut", "cre"))
