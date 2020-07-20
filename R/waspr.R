@@ -3,7 +3,10 @@
 #'
 #' This package contains functions to compute Wasserstein barycenters of subset
 #' posteriors using the swapping algorithm developed by Puccetti, Rüschendorf
-#' and Vanduffel (2020).
+#' and Vanduffel (2020). The Wasserstein barycenter is a geometric approach for
+#' combining subset posteriors. It allows for parallel and distributed
+#' computation of the posterior in case of complex models and/or big datasets,
+#' thereby increasing computational speed tremendously.
 #'
 #' @section Functions:
 #'
