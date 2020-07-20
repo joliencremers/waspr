@@ -9,7 +9,7 @@
 file.
 
 * Used the description field to explain and elaborate on specific
-terms terms used in the title and description field.
+terms used in the title and description field.
 
 ## R CMD check results 
 
