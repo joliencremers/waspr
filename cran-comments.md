@@ -5,7 +5,7 @@
 
 # Resubmission This is a resubmission. In this version I have:
 
-* The curly brackets in the Description of the the DESCRIPTION
+* Removed the curly brackets in the Description of the the DESCRIPTION
 file.
 
 * Used the description field to explain and elaborate on specific
