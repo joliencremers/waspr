@@ -47,11 +47,11 @@ sampling algorithm and subsequently combines them into a single sample
 from the full data posterior. Three other scaleable methods for subset
 posteriors, averaging, Consensus Monte Carlo [@Scott2016-wu], and
 semiparametric density product estimators [@Neiswanger2013-nk], were
-implemented in the `R`-package `parallelMCMCcombine`. This package is
-however not actively maintained and was removed from `CRAN` as it was
-not maintained anymore. Moreover, @Srivastava2018-zw, shows that WASP
-obtains better approximations of the full data posterior than other
-methods for subset posteriors.
+implemented in the `R`-package `parallelMCMCcombine`. This package was
+however removed from `CRAN` as it is not actively maintained anymore.
+Moreover, @Srivastava2018-zw, shows that WASP obtains better
+approximations of the full data posterior than other methods for subset
+posteriors.
 
 Wasserstein barycenters can be estimated using several techniques. The
 `R`-package `Barycenter` implements the Sinkhorn algorithm developed by
