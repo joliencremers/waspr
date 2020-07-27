@@ -73,9 +73,14 @@ The purpose of `waspr` is to:
 
 # Example Usage
 
-To use `waspr` the user first needs to load the package as follows:
+To use `waspr` the user first needs install the package from CRAN and load the package as follows:
 
-```{r message=FALSE}
+```{r message=FALSE, eval = FALSE}
+install.packages("waspr")
+library(waspr)
+```
+
+```{r message=FALSE, echo = FALSE}
 library(waspr)
 ```
 

@@ -74,9 +74,11 @@ subset posteriors and other empirical measures to `R`-users.
 
 # Example Usage
 
-To use `waspr` the user first needs to load the package as follows:
+To use `waspr` the user first needs install the package from CRAN and
+load the package as follows:
 
 ``` {.r}
+install.packages("waspr")
 library(waspr)
 ```
 
