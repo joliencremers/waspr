@@ -12,6 +12,8 @@ Description: Functions to compute Wasserstein barycenters
     posterior in case of complex models and/or big datasets, thereby increasing
     computational speed tremendously.
 License: GPL-3
+URL: https://github.com/joliencremers/waspr
+BugReports: https://github.com/joliencremers/waspr/issues
 Encoding: UTF-8
 LazyData: true
 Imports: 
