@@ -6,7 +6,7 @@
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/waspr)](https://cran.r-project.org/package=waspr)
 [![Build
 Status](https://travis-ci.org/joliencremers/waspr.svg?branch=master)](https://travis-ci.org/joliencremers/waspr)
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3971910.svg)](https://doi.org/10.5281/zenodo.3971910)
 The goal of waspr is to compute Wasserstein barycenters of subset
 posteriors.
 
