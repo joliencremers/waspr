@@ -1,3 +1,6 @@
+# waspr 1.0.1.9000
+This is a development version
+
 # waspr 1.0.1
 Small documentation fixes for the breaking change:
 
