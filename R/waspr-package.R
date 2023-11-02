@@ -24,8 +24,9 @@
 #' @useDynLib waspr, .registration = TRUE
 #'
 #' @importFrom Rcpp evalCpp
-#'
-#' @docType package
-#' @name waspr
+#' @keywords internal
+"_PACKAGE"
 
+## usethis namespace: start
+## usethis namespace: end
 NULL

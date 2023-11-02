@@ -1,8 +1,8 @@
 Package: waspr
 Type: Package
 Title: Wasserstein Barycenters of Subset Posteriors
-Version: 1.0.0.9000
-Authors@R:person("Jolien", "Cremers", email = "joliencremers@gmail.com",
+Version: 1.0.1
+Authors@R: person("Jolien", "Cremers", email = "joliencremers@gmail.com",
                   role = c("aut", "cre"))
 Description: Functions to compute Wasserstein barycenters
     of subset posteriors using the swapping algorithm developed by Puccetti, 
@@ -17,13 +17,12 @@ BugReports: https://github.com/joliencremers/waspr/issues
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    Rcpp (>= 1.0.4.6),
-    methods
+    Rcpp (>= 1.0.4.6)
 LinkingTo: 
     BH,
     Rcpp,
     RcppArmadillo,
-RoxygenNote: 7.1.0
+RoxygenNote: 7.2.3
 Suggests: 
     knitr,
     rmarkdown,

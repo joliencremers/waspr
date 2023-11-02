@@ -6,6 +6,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // swap_rcpp
 arma::cube swap_rcpp(arma::cube samples, double acc, int iter, bool out);
 RcppExport SEXP _waspr_swap_rcpp(SEXP samplesSEXP, SEXP accSEXP, SEXP iterSEXP, SEXP outSEXP) {
